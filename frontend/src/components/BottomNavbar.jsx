@@ -295,7 +295,7 @@ export default function BottomNavbar() {
                 custom={4}
                 className="w-56 max-w-[86vw]"
               >
-                <Link to="/trading-bots" onClick={() => setCenterOpen(false)}>
+                <Link to="/bots" onClick={() => setCenterOpen(false)}>
                   <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-white dark:bg-navbar shadow-lg border border-gray-100 dark:border-gray-800">
                     <div className="w-10 h-10 rounded-lg grid place-items-center bg-secondary">
                       <Activity className="w-5 h-5" />
@@ -357,7 +357,7 @@ export default function BottomNavbar() {
                 className="w-56 max-w-[86vw]"
               >
                 <Link
-                  to="/account-trading"
+                  to="/copy-trading"
                   onClick={() => setActivitiesOpen(false)}
                 >
                   <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-white dark:bg-navbar shadow-lg border border-gray-100 dark:border-gray-800">
@@ -365,7 +365,7 @@ export default function BottomNavbar() {
                       <CreditCard className="w-5 h-5" />
                     </div>
                     <div className="flex-1 text-left">
-                      <div className="font-medium">Account Trading</div>
+                      <div className="font-medium">Copy Trading</div>
                       <div className="text-xs text-gray-400">Manage trades</div>
                     </div>
                     <ChevronRight className="w-4 h-4 text-gray-400" />
@@ -493,7 +493,7 @@ export default function BottomNavbar() {
                 exit="exit"
                 className="w-56 max-w-[86vw]"
               >
-                <Link to="/upgrade" onClick={() => setRightOpen(false)}>
+                <Link to="/trading-package" onClick={() => setRightOpen(false)}>
                   <div className="flex items-center gap-3 px-4 py-3 rounded-xl bg-white dark:bg-navbar shadow-lg border border-gray-100 dark:border-gray-800">
                     <div className="w-10 h-10 rounded-lg grid place-items-center bg-secondary">
                       <ArrowUpCircle className="w-5 h-5" />

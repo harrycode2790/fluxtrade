@@ -212,7 +212,7 @@ export default function SidebarAnimated() {
 
                 <motion.div whileHover={{ x: 6 }}>
                   <Link
-                    to="/tools/bots"
+                    to="/bots"
                     className={navItemClass(currentPath === "/bots")}
                   >
                     <ChevronRight className="w-4 h-4" />
