@@ -19,9 +19,30 @@ import adminRouter from "./routes/admin.routes.js";
 const app = express();
 
 app.use(express.json());
+const allowedOrigins = (ENV.CLIENT_URL || "")
+  .split(",")
+  .map((origin) => origin.trim())
+  .filter(Boolean);
+
 app.use(
   cors({
-    origin: ENV.CLIENT_URL || "http://localhost:5173",
+    origin: (origin, callback) => {
+      if (!origin) return callback(null, true);
+
+      if (allowedOrigins.length > 0 && allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      if (origin.endsWith(".vercel.app")) {
+        return callback(null, true);
+      }
+
+      if (origin === "http://localhost:5173") {
+        return callback(null, true);
+      }
+
+      return callback(null, false);
+    },
     credentials: true,
   })
 );
