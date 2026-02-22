@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+/* Enable manual dark mode toggling via the `.dark` class */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #0B0E14;   
+  --color-secondary: #00E676;   
+  --color-navbar: #1E1F23;
+  --color-tertiary: #374151;
+  --color-icon: #9CA3AF;
+  --color-lightbg: #f8fafc;
+  --color-secondaryToo: #BBF7D0
+
+
+  --font-size-nav-size: 11px;
+}
+
+/* Optional global styles */
+html, body {
+  @apply min-h-screen bg-gray-300 text-black dark:bg-gray-900  dark:text-white transition-colors duration-300;
+}
